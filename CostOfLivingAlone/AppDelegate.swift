@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-6789227322694215~6249290065")
         // Override point for customization after application launch.
         return true
     }

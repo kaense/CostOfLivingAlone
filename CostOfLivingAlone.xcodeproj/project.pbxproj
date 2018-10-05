@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37E1E3EB2C82625309D318D0 /* Pods_CostOfLivingAlone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528EC17461A49EBB9E561D2D /* Pods_CostOfLivingAlone.framework */; };
 		93C608D021633BD100FD64E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C608CF21633BD100FD64E0 /* AppDelegate.swift */; };
 		93C608D221633BD100FD64E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C608D121633BD100FD64E0 /* ViewController.swift */; };
 		93C608D521633BD100FD64E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C608D321633BD100FD64E0 /* Main.storyboard */; };
 		93C608D721633BD200FD64E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C608D621633BD200FD64E0 /* Assets.xcassets */; };
 		93C608DA21633BD200FD64E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C608D821633BD200FD64E0 /* LaunchScreen.storyboard */; };
 		93C608E521633BD200FD64E0 /* CostOfLivingAloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C608E421633BD200FD64E0 /* CostOfLivingAloneTests.swift */; };
+		93C608F02163783D00FD64E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93C608EF2163783D00FD64E0 /* GoogleService-Info.plist */; };
+		B46E4CCB1D185A0A0EDB600E /* Pods_CostOfLivingAloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B5BFC2AAD91FE9459559D2 /* Pods_CostOfLivingAloneTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DA784BFCE94DF84BBF60A3E /* Pods-CostOfLivingAlone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostOfLivingAlone.release.xcconfig"; path = "Pods/Target Support Files/Pods-CostOfLivingAlone/Pods-CostOfLivingAlone.release.xcconfig"; sourceTree = "<group>"; };
+		528EC17461A49EBB9E561D2D /* Pods_CostOfLivingAlone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CostOfLivingAlone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5E48E8DD5DFC9E6FDCAA98 /* Pods-CostOfLivingAlone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostOfLivingAlone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CostOfLivingAlone/Pods-CostOfLivingAlone.debug.xcconfig"; sourceTree = "<group>"; };
+		83B5BFC2AAD91FE9459559D2 /* Pods_CostOfLivingAloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CostOfLivingAloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C608CC21633BD100FD64E0 /* CostOfLivingAlone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CostOfLivingAlone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C608CF21633BD100FD64E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C608D121633BD100FD64E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +43,9 @@
 		93C608E021633BD200FD64E0 /* CostOfLivingAloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CostOfLivingAloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C608E421633BD200FD64E0 /* CostOfLivingAloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostOfLivingAloneTests.swift; sourceTree = "<group>"; };
 		93C608E621633BD200FD64E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C608EF2163783D00FD64E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A44B784DFE9769F47944A22E /* Pods-CostOfLivingAloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostOfLivingAloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CostOfLivingAloneTests/Pods-CostOfLivingAloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		D0718D72DF4E85D1D0FC2224 /* Pods-CostOfLivingAloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostOfLivingAloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CostOfLivingAloneTests/Pods-CostOfLivingAloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E1E3EB2C82625309D318D0 /* Pods_CostOfLivingAlone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46E4CCB1D185A0A0EDB600E /* Pods_CostOfLivingAloneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +74,8 @@
 				93C608CE21633BD100FD64E0 /* CostOfLivingAlone */,
 				93C608E321633BD200FD64E0 /* CostOfLivingAloneTests */,
 				93C608CD21633BD100FD64E0 /* Products */,
+				C65AB0B38277AFDC92A4F385 /* Pods */,
+				F4CFF5D1558BFB8E54410530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +97,7 @@
 				93C608D621633BD200FD64E0 /* Assets.xcassets */,
 				93C608D821633BD200FD64E0 /* LaunchScreen.storyboard */,
 				93C608DB21633BD200FD64E0 /* Info.plist */,
+				93C608EF2163783D00FD64E0 /* GoogleService-Info.plist */,
 			);
 			path = CostOfLivingAlone;
 			sourceTree = "<group>";
@@ -96,6 +111,26 @@
 			path = CostOfLivingAloneTests;
 			sourceTree = "<group>";
 		};
+		C65AB0B38277AFDC92A4F385 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A5E48E8DD5DFC9E6FDCAA98 /* Pods-CostOfLivingAlone.debug.xcconfig */,
+				4DA784BFCE94DF84BBF60A3E /* Pods-CostOfLivingAlone.release.xcconfig */,
+				D0718D72DF4E85D1D0FC2224 /* Pods-CostOfLivingAloneTests.debug.xcconfig */,
+				A44B784DFE9769F47944A22E /* Pods-CostOfLivingAloneTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4CFF5D1558BFB8E54410530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				528EC17461A49EBB9E561D2D /* Pods_CostOfLivingAlone.framework */,
+				83B5BFC2AAD91FE9459559D2 /* Pods_CostOfLivingAloneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93C608E921633BD200FD64E0 /* Build configuration list for PBXNativeTarget "CostOfLivingAlone" */;
 			buildPhases = (
+				11A23E371446FBD407E1EE95 /* [CP] Check Pods Manifest.lock */,
 				93C608C821633BD100FD64E0 /* Sources */,
 				93C608C921633BD100FD64E0 /* Frameworks */,
 				93C608CA21633BD100FD64E0 /* Resources */,
+				E49E9FEDD675AD1E8057B50E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93C608EC21633BD200FD64E0 /* Build configuration list for PBXNativeTarget "CostOfLivingAloneTests" */;
 			buildPhases = (
+				16935E285520EFD0ECF972F3 /* [CP] Check Pods Manifest.lock */,
 				93C608DC21633BD200FD64E0 /* Sources */,
 				93C608DD21633BD200FD64E0 /* Frameworks */,
 				93C608DE21633BD200FD64E0 /* Resources */,
@@ -180,6 +218,7 @@
 				93C608DA21633BD200FD64E0 /* LaunchScreen.storyboard in Resources */,
 				93C608D721633BD200FD64E0 /* Assets.xcassets in Resources */,
 				93C608D521633BD100FD64E0 /* Main.storyboard in Resources */,
+				93C608F02163783D00FD64E0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +230,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11A23E371446FBD407E1EE95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CostOfLivingAlone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16935E285520EFD0ECF972F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CostOfLivingAloneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E49E9FEDD675AD1E8057B50E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CostOfLivingAlone/Pods-CostOfLivingAlone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CostOfLivingAlone/Pods-CostOfLivingAlone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93C608C821633BD100FD64E0 /* Sources */ = {
@@ -358,6 +456,7 @@
 		};
 		93C608EA21633BD200FD64E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A5E48E8DD5DFC9E6FDCAA98 /* Pods-CostOfLivingAlone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +475,7 @@
 		};
 		93C608EB21633BD200FD64E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA784BFCE94DF84BBF60A3E /* Pods-CostOfLivingAlone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +494,7 @@
 		};
 		93C608ED21633BD200FD64E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0718D72DF4E85D1D0FC2224 /* Pods-CostOfLivingAloneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +516,7 @@
 		};
 		93C608EE21633BD200FD64E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44B784DFE9769F47944A22E /* Pods-CostOfLivingAloneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
