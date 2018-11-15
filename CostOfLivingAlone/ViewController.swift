@@ -12,30 +12,158 @@ import GoogleMobileAds
 
 class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegate {
     
-    let AdMobTest:Bool = true
+    @IBOutlet var scrollView: UIScrollView!
+    // 現在選択されているTextField
+    var selectedTextField:UITextField?
+    
+    
+    let AdMobTest:Bool = false
     
     @IBOutlet var subBannerView: UIView!
     var bannerView: GADBannerView!
     
     @IBOutlet var total: UILabel!
-    @IBOutlet var income: UITextField!
-    @IBOutlet var rent: UITextField!
-    @IBOutlet var food: UITextField!
-    @IBOutlet var energy: UITextField!
-    @IBOutlet var phone: UITextField!
-    @IBOutlet var friendly: UITextField!
-    @IBOutlet var etc: UITextField!
-    @IBOutlet var livingTax: UITextField!
-    @IBOutlet var pension: UITextField!
-    @IBOutlet var health: UITextField!
-    @IBOutlet var incomeTax: UITextField!
-    @IBOutlet var etcTax: UITextField!
+    @IBOutlet var income: UITextField!{
+        didSet {
+            income?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForIncome)))
+        }
+    }
+    @IBOutlet var rent: UITextField!{
+        didSet {
+            rent?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForRent)))
+        }
+    }
+    @IBOutlet var food: UITextField!{
+        didSet {
+            food?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForFood)))
+        }
+    }
+    @IBOutlet var energy: UITextField!{
+        didSet {
+            energy?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForEnergy)))
+        }
+    }
+    @IBOutlet var phone: UITextField!{
+        didSet {
+            phone?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForPhone)))
+        }
+    }
+    @IBOutlet var friendly: UITextField!{
+        didSet {
+            friendly?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForFriendly)))
+        }
+    }
+    @IBOutlet var etc: UITextField!{
+        didSet {
+            etc?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForEtc)))
+        }
+    }
+    @IBOutlet var livingTax: UITextField!{
+        didSet {
+            livingTax?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForLivingTax)))
+        }
+    }
+    @IBOutlet var pension: UITextField!{
+        didSet {
+            pension?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForPension)))
+        }
+    }
+    @IBOutlet var health: UITextField!{
+        didSet {
+            health?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForHealth)))
+        }
+    }
+    @IBOutlet var incomeTax: UITextField!{
+        didSet {
+            incomeTax?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForIncomeTax)))
+        }
+    }
+    @IBOutlet var etcTax: UITextField!{
+        didSet {
+            etcTax?.addDoneCancelToolbar(onDone: (target: self, action: #selector(doneButtonTappedForEtcTax)))
+        }
+    }
+    
+    @objc func doneButtonTappedForIncome() {
+        income.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForFood() {
+        food.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForRent() {
+        rent.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForEnergy() {
+        energy.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForPhone() {
+        phone.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForFriendly() {
+        friendly.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForEtc() {
+        etc.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForLivingTax() {
+        livingTax.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForPension() {
+        pension.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForHealth() {
+        health.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForIncomeTax() {
+        incomeTax.resignFirstResponder()
+    }
+    @objc func doneButtonTappedForEtcTax() {
+        etcTax.resignFirstResponder()
+    }
     
     // UserDefaults のインスタンス
     let userDefaults = UserDefaults.standard
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // キーボードイベントの監視開始
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillBeShown(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillBeHidden(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        
+        // キーボードイベントの監視解除
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillShowNotification,
+                                                  object: nil)
+        NotificationCenter.default.removeObserver(self,
+                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  object: nil)
+    }
+    
+    // キーボード以外をタップするとキーボードが下がるメソッド
+    @objc func hideKyeoboardTap(recognizer : UITapGestureRecognizer){
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //tapされた時の動作を宣言する: 一度タップされたらキーボードを隠す
+        let hideTap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKyeoboardTap))
+        hideTap.numberOfTapsRequired = 1
+        self.view.isUserInteractionEnabled = true
+        self.view.addGestureRecognizer(hideTap)
         
         // デフォルト値
         userDefaults.register(defaults: ["income": "120000" ])
@@ -238,3 +366,93 @@ class ViewController: UIViewController, UITextFieldDelegate,GADBannerViewDelegat
 }
 
 
+
+extension ViewController{
+    
+    func textFieldInit() {
+        // 最初に選択されているTextFieldをセット
+        self.selectedTextField = self.income
+        
+        // 各TextFieldのdelegate 色んなイベントが飛んでくるようになる
+        self.income.delegate = self
+        self.rent.delegate = self
+        self.food.delegate = self
+        self.energy.delegate = self
+        self.phone.delegate = self
+        self.friendly.delegate = self
+        self.etc.delegate = self
+        self.livingTax.delegate = self
+        self.pension.delegate = self
+        self.health.delegate = self
+        self.income.delegate = self
+        self.etcTax.delegate = self
+        
+    }
+    
+    // キーボードが表示された時に呼ばれる
+    @objc func keyboardWillBeShown(notification: NSNotification) {
+        if let userInfo = notification.userInfo {
+            if let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue, let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue {
+                restoreScrollViewSize()
+                
+                let convertedKeyboardFrame = scrollView.convert(keyboardFrame, from: nil)
+                // 現在選択中のTextFieldの下部Y座標とキーボードの高さから、スクロール量を決定
+                let offsetY: CGFloat = self.selectedTextField!.frame.maxY - convertedKeyboardFrame.minY
+                if offsetY < 0 { return }
+                updateScrollViewSize(moveSize: offsetY, duration: animationDuration)
+            }
+        }
+    }
+    
+    // キーボードが閉じられた時に呼ばれる
+    @objc func keyboardWillBeHidden(notification: NSNotification) {
+        restoreScrollViewSize()
+    }
+    
+    // TextFieldが選択された時
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // 選択されているTextFieldを更新
+        self.selectedTextField = textField
+    }
+    
+    
+    // moveSize分Y方向にスクロールさせる
+    func updateScrollViewSize(moveSize: CGFloat, duration: TimeInterval) {
+        UIView.beginAnimations("ResizeForKeyboard", context: nil)
+        UIView.setAnimationDuration(duration)
+        
+        let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: moveSize, right: 0)
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.scrollView.contentOffset = CGPoint(x: 0, y: moveSize)
+        
+        UIView.commitAnimations()
+    }
+    
+    func restoreScrollViewSize() {
+        // キーボードが閉じられた時に、スクロールした分を戻す
+        self.scrollView.contentInset = UIEdgeInsets.zero
+        self.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+    }
+}
+
+extension UITextField {
+    func addDoneCancelToolbar(onDone: (target: Any, action: Selector)? = nil, onCancel: (target: Any, action: Selector)? = nil) {
+        //let onCancel = onCancel ?? (target: self, action: #selector(cancelButtonTapped))
+        let onDone = onDone ?? (target: self, action: #selector(doneButtonTapped))
+        
+        let toolbar: UIToolbar = UIToolbar()
+        toolbar.barStyle = .default
+        toolbar.items = [
+            //UIBarButtonItem(title: "Cancel", style: .plain, target: onCancel.target, action: onCancel.action),
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil),
+            UIBarButtonItem(title: "Done", style: .done, target: onDone.target, action: onDone.action)
+        ]
+        toolbar.sizeToFit()
+        self.inputAccessoryView = toolbar
+    }
+    
+    // Default actions:
+    @objc func doneButtonTapped() { self.resignFirstResponder() }
+    //@objc func cancelButtonTapped() { self.resignFirstResponder() }
+}

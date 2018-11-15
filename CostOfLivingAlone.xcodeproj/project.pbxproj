@@ -15,6 +15,7 @@
 		93C608DA21633BD200FD64E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C608D821633BD200FD64E0 /* LaunchScreen.storyboard */; };
 		93C608E521633BD200FD64E0 /* CostOfLivingAloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C608E421633BD200FD64E0 /* CostOfLivingAloneTests.swift */; };
 		93C608F02163783D00FD64E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93C608EF2163783D00FD64E0 /* GoogleService-Info.plist */; };
+		93C608F6216E54BB00FD64E0 /* icon_105860_512 in Resources */ = {isa = PBXBuildFile; fileRef = 93C608F5216E54BB00FD64E0 /* icon_105860_512 */; };
 		B46E4CCB1D185A0A0EDB600E /* Pods_CostOfLivingAloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B5BFC2AAD91FE9459559D2 /* Pods_CostOfLivingAloneTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		93C608E421633BD200FD64E0 /* CostOfLivingAloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostOfLivingAloneTests.swift; sourceTree = "<group>"; };
 		93C608E621633BD200FD64E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93C608EF2163783D00FD64E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93C608F5216E54BB00FD64E0 /* icon_105860_512 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon_105860_512; sourceTree = "<group>"; };
 		A44B784DFE9769F47944A22E /* Pods-CostOfLivingAloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostOfLivingAloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CostOfLivingAloneTests/Pods-CostOfLivingAloneTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0718D72DF4E85D1D0FC2224 /* Pods-CostOfLivingAloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CostOfLivingAloneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CostOfLivingAloneTests/Pods-CostOfLivingAloneTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				93C608D321633BD100FD64E0 /* Main.storyboard */,
 				93C608D621633BD200FD64E0 /* Assets.xcassets */,
 				93C608D821633BD200FD64E0 /* LaunchScreen.storyboard */,
+				93C608F5216E54BB00FD64E0 /* icon_105860_512 */,
 				93C608DB21633BD200FD64E0 /* Info.plist */,
 				93C608EF2163783D00FD64E0 /* GoogleService-Info.plist */,
 			);
@@ -215,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C608F6216E54BB00FD64E0 /* icon_105860_512 in Resources */,
 				93C608DA21633BD200FD64E0 /* LaunchScreen.storyboard in Resources */,
 				93C608D721633BD200FD64E0 /* Assets.xcassets in Resources */,
 				93C608D521633BD100FD64E0 /* Main.storyboard in Resources */,
